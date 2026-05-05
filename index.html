@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>What to Expect From a Professional Mobile Auto Care Provider | Diggs Mobile Auto Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark-green: #0a2e1f;
+            --dark-green-light: #1a4a33;
+            --black: #111111;
+            --black-light: #1a1a1a;
+            --white: #ffffff;
+            --off-white: #f5f5f5;
+            --gray-100: #f0f0f0;
+            --gray-200: #e0e0e0;
+            --gray-600: #666666;
+            --gray-700: #444444;
+            --gray-900: #222222;
+            --accent-green: #2d6a4f;
+            --accent-green-light: #40916c;
+            --text-body: #333333;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--off-white);
+            color: var(--text-body);
+            line-height: 1.65;
+            min-height: 100vh;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background: var(--black);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 0 2rem;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .nav-logo img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-200);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover { color: var(--accent-green-light); }
+
+        .hero {
+            margin-top: 70px;
+            padding: 80px 2rem 60px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--black) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 40% at 50% 90%, rgba(45,106,79,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent-green-light);
+            margin-bottom: 1.5rem;
+            padding: 0.35rem 1.2rem;
+            border: 1px solid rgba(45,106,79,0.4);
+            border-radius: 40px;
+            background: rgba(45,106,79,0.12);
+        }
+
+        .hero h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+            max-width: 950px;
+            margin: 0 auto 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent-green-light);
+            border-bottom: 2px solid var(--accent-green-light);
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--gray-200);
+            font-weight: 400;
+        }
+
+        .hero-meta span { display: flex; align-items: center; gap: 0.4rem; }
+        .hero-divider {
+            width: 1px;
+            height: 16px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .article-with-sidebar {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 3rem 2rem 80px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .main-article {
+            flex: 2;
+            min-width: 280px;
+        }
+
+        .sidebar-desktop {
+            flex: 1;
+            min-width: 280px;
+            position: sticky;
+            top: 90px;
+            align-self: start;
+        }
+
+        .map-widget {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .map-widget h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 0.9rem;
+        }
+
+        .map-widget iframe {
+            width: 100%;
+            min-height: 260px;
+            border-radius: 12px;
+            border: 0;
+        }
+
+        .mobile-map {
+            display: none;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .intro-block {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-left: 4px solid var(--accent-green);
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--gray-700);
+            line-height: 1.7;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .intro-block a {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(45,106,79,0.3);
+        }
+
+        .intro-block a:hover {
+            color: var(--dark-green);
+            border-bottom-color: var(--accent-green);
+        }
+
+        .prose p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: var(--gray-700);
+            line-height: 1.75;
+        }
+
+        .prose h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--dark-green);
+            margin: 2.5rem 0 1rem;
+            letter-spacing: -0.01em;
+            border-bottom: 2px solid var(--gray-200);
+            padding-bottom: 0.5rem;
+        }
+
+        .checklist-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .checklist-card h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark-green);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checklist-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .checklist-card li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--gray-700);
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .check-icon svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding: 2rem 2rem;
+            background: linear-gradient(135deg, rgba(10,46,31,0.03) 0%, rgba(45,106,79,0.05) 100%);
+            border-left: 4px solid var(--accent-green);
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+        }
+
+        .pull-quote p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--dark-green);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        .stat-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .stat-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .stat-number span {
+            color: var(--dark-green);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .highlight-box {
+            background: var(--black);
+            border-radius: 16px;
+            padding: 1.8rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--accent-green-light);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .highlight-box p {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark-green) 0%, var(--black) 100%);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            margin: 3.5rem 0 0;
+        }
+
+        .cta-section h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.75);
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 0.85rem 2.2rem;
+            background: var(--accent-green);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 40px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-green-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(45,106,79,0.3);
+        }
+
+        .cta-contact {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-contact a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .cta-contact a:hover { color: var(--accent-green-light); }
+
+        .back-link-container {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .back-nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 40px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-700);
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .back-nav-btn:hover {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: var(--white);
+            transform: translateX(-4px);
+        }
+
+        footer {
+            background: var(--black);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-logo img {
+            height: 45px;
+            margin: 0 auto 1rem;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-200);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--accent-green-light); }
+
+        .footer-copy {
+            color: var(--gray-600);
+            font-size: 0.8rem;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 860px) {
+            .article-with-sidebar {
+                flex-direction: column;
+                padding: 2rem 1.25rem 60px;
+            }
+            .sidebar-desktop {
+                display: none;
+            }
+            .mobile-map {
+                display: block;
+            }
+            .hero { padding: 60px 1.25rem 50px; }
+            .stat-strip { grid-template-columns: 1fr; gap: 1rem; }
+            .cta-section { padding: 2rem 1.5rem; }
+            .nav-links { gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="https://diggsmobileautocare.com/" class="nav-logo">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/78fce5cb-6cc1-4d63-c2dc-b7f0d32cba00/publicContain" alt="Diggs Mobile Auto Care Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="https://diggsmobileautocare.com/" target="_blank">Home</a></li>
+            <li><a href="https://diggsmobileautocare.com/#services" target="_blank">Services</a></li>
+            <li><a href="tel:7573892524" target="_blank">Call Now</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-eyebrow">Mobile Detailing Guide</div>
+        <h1>What Should You Expect From a Professional <em>Mobile Auto Care Provider?</em></h1>
+        <div class="hero-meta">
+            <span>📍 Chesapeake, VA</span>
+            <div class="hero-divider"></div>
+            <span>6 min read</span>
+            <div class="hero-divider"></div>
+            <span>Diggs Mobile Auto Care</span>
+        </div>
+    </div>
+
+    <div class="article-with-sidebar">
+        <div class="main-article">
+            <div class="back-link-container reveal">
+                <a href="https://diggsmobileautocare.com/" class="back-nav-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span>← Back to Home</span>
+                </a>
+            </div>
+
+            <!-- INTRO: primary keyword linked to GMB -->
+            <div class="intro-block reveal">
+                A truly professional detail changes everything. Not just how your car looks, but how you feel driving it. Choosing a <a href="https://maps.app.goo.gl/4h9i5wynsy1JvhwRA" target="_blank" rel="noopener noreferrer"><strong>reliable Mobile auto Care  service in Chesapeake VA</strong></a> means you get showroom quality results without ever leaving your driveway. Mobile auto care has changed the game for busy people who still want their vehicles to look their best. But not every mobile detailer operates the same way. Knowing what to expect helps you spot the pros from the amateurs and makes sure you're getting real value for your money.
+            </div>
+
+            <div class="prose">
+                <p class="reveal">Mobile detailing isn't just about convenience. It's about getting professional grade work done on your schedule. A good provider shows up ready, works efficiently, and leaves your car looking better than it has in years. Here's exactly what you should expect when you hire a true professional.</p>
+
+                <h2 class="reveal">They come fully equipped and self-contained</h2>
+                <p class="reveal">A real mobile detailer doesn't need anything from you. No water hose. No power outlet. No space in your garage. Professional rigs carry their own water tanks, pressure washers, generators, and every product they'll need. They pull up, set up, and get to work. That's the whole point of mobile service.</p>
+
+                <div class="checklist-card reveal">
+                    <h4>✅ What a professional mobile setup includes</h4>
+                    <ul>
+                        <li><div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div> Self-contained water and power system</li>
+                        <li><div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div> Professional grade pressure washer and extractors</li>
+                        <li><div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div> High quality microfiber towels and brushes</li>
+                        <li><div class="check-icon"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div> Multiple products for different surfaces and materials</li>
+                    </ul>
+                </div>
+
+                <h2 class="reveal">Convenience without cutting corners</h2>
+                <p class="reveal">The biggest reason people choose mobile detailing is convenience. But convenience shouldn't mean lower quality. A professional provider takes the same amount of time and care as a brick and mortar shop. They just do it at your location. You can work from home, take care of chores, or just relax while your car gets the full treatment.</p>
+
+                <div class="stat-strip reveal">
+                    <div class="stat-item"><div class="stat-number">2<span>-3 hrs</span></div><div class="stat-label">average time for a full detail</div></div>
+                    <div class="stat-item"><div class="stat-number">100<span>%</span></div><div class="stat-label">mobile, no shop required</div></div>
+                    <div class="stat-item"><div class="stat-number">0<span></span></div><div class="stat-label">waiting rooms or dropped keys</div></div>
+                </div>
+
+                <h2 class="reveal">Thorough interior detailing and restoration</h2>
+                <p class="reveal">Interior detailing is where a professional really shines. We're not talking about a quick vacuum and wipe down. Real interior detailing means pulling everything out, cleaning every crevice, extracting carpets and seats, conditioning leather, and making the inside feel fresh again. If your car has seen better days, some providers also offer interior restoration to bring worn surfaces back to life.</p>
+
+                <div class="pull-quote reveal"><p>I've seen cars that looked like they'd never been cleaned. Food crumbs in every crack, stains on the seats, smells you couldn't ignore. A proper interior detail changes everything. It's not just about looking clean. It's about actually being clean.</p></div>
+
+                <h2 class="reveal">Exterior care that protects your paint</h2>
+                <p class="reveal">A professional wash isn't a spray and wipe. It's a careful process. Foam cannon to loosen dirt, two bucket method to prevent scratches, thorough drying, and finally wax or sealant to protect the paint. Good mobile detailers also clean wheels, tires, door jambs, and windows with the same attention to detail. The result is a finish that pops and stays protected longer.</p>
+
+                <h2 class="reveal">Customized service based on your vehicle</h2>
+                <p class="reveal">Every car is different. A sedan needs a different approach than an SUV or a truck. Paint types, interior materials, and problem areas all vary. A professional mobile auto care provider adjusts their process based on what's in front of them. They don't use the same product on leather that they use on cloth, and they don't treat matte paint like clear coat.</p>
+
+                <div class="highlight-box">
+                    <h3>Red flags to watch out for</h3>
+                    <p>⚠️ They ask to use your water or electricity — a pro brings their own<br>
+                    ⚠️ They use dish soap or generic household cleaners<br>
+                    ⚠️ They rush through the job in under an hour<br>
+                    ⚠️ They don't have insurance or a clear satisfaction guarantee<br>
+                    ⚠️ Prices seem way too good to be true for a full detail</p>
+                </div>
+
+                <h2 class="reveal">Reliability and clear communication</h2>
+                <p class="reveal">One of the most frustrating things about any service is when people don't show up or don't communicate. A professional mobile detailer confirms appointments, arrives on time, and keeps you updated if anything changes. They also explain what they'll do, how long it will take, and what you can expect when they're finished. No guessing games.</p>
+
+                <h2 class="reveal">Long term value and vehicle protection</h2>
+                <p class="reveal">Regular professional detailing isn't an expense. It's an investment. Wax and sealant protect your paint from UV rays and contaminants. Interior conditioning prevents cracking and fading. Deep cleaning removes allergens and bacteria. All of this adds up to better resale value and a car that lasts longer. A good provider helps you set up a maintenance schedule that keeps your car looking great year round.</p>
+
+                <h2 class="reveal">Transparent pricing and no hidden fees</h2>
+                <p class="reveal">Nobody likes surprise charges. A professional mobile auto care provider gives you clear pricing upfront. They explain what's included in each package and what add-ons cost if you need them. No bait and switch, no "oh that's extra." Just honest pricing for honest work. If a detailer can't tell you exactly what you're paying for, walk away.</p>
+
+                <h2 class="reveal">Building a relationship with a trusted provider</h2>
+                <p class="reveal">Once you find a detailer who does great work, stick with them. They'll learn your car, remember your preferences, and catch small issues before they become big problems. A long term relationship with a trusted professional means your car always looks its best and you never have to stress about finding someone new.</p>
+
+                <h2 class="reveal">Conclusion</h2>
+                <p class="reveal">Working with a professional mobile auto care provider means getting convenience, quality, and real expertise all in one. They come fully equipped, respect your time, and deliver interior and exterior results that make your car feel brand new again. For vehicle owners in Chesapeake, Norfolk, Virginia Beach, and across Hampton Roads, <a href="https://diggsmobileautocare.com/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-green); font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--accent-green);"><strong>Diggs Mobile Auto Care</strong></a> delivers exactly that. Professional equipment, honest pricing, and a satisfaction guarantee that shows they stand behind their work. Whether you need interior detailing, exterior care, or a complete restoration, they come to your driveway and get it done right. Book your appointment today and see what a real professional can do.</p>
+            </div>
+
+            <!-- MOBILE MAP SECTION -->
+            <div class="mobile-map reveal">
+                <div class="map-widget">
+                    <h4>📍 Find Us on Google Maps</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d408234.70737374754!2d-76.3642165!3d36.9301935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8864f23e149864f1%3A0x25949c3cd404e619!2sDiggs%20Mobile%20Auto%20Care!5e0!3m2!1sen!2s!4v1778015135316!5m2!1sen!2s" allowfullscreen="" loading="lazy" style="border:0; width:100%; min-height:260px;"></iframe>
+                    <p style="font-size:0.8rem; margin-top:0.8rem; color: var(--gray-600);">2404 Sir Lance Dr, Chesapeake, VA 23325, USA</p>
+                    <div style="margin-top: 0.5rem;">
+                        <a href="https://maps.app.goo.gl/4h9i5wynsy1JvhwRA" target="_blank" style="color: var(--accent-green); text-decoration: none; font-weight: 500;">Open in Google Maps →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA SECTION -->
+            <div class="cta-section reveal">
+                <h2>Ready for a detail that actually delivers?</h2>
+                <p>Stop wasting time and money on subpar service. Diggs Mobile Auto Care brings pro grade equipment and real attention to detail right to your driveway. Book online in seconds.</p>
+                <a href="https://diggsmobileautocare.com/" class="cta-btn">Visit Diggs Mobile Auto Care</a>
+                <div class="cta-contact">
+                    <a href="tel:7573892524">📞 (757) 389-2524</a>
+                    <a href="https://diggsmobileautocare.com/">🌐 diggsmobileautocare.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DESKTOP SIDEBAR WITH MAP -->
+        <aside class="sidebar-desktop">
+            <div class="map-widget reveal">
+                <h4>📍 Find Us on Google Maps</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d408234.70737374754!2d-76.3642165!3d36.9301935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8864f23e149864f1%3A0x25949c3cd404e619!2sDiggs%20Mobile%20Auto%20Care!5e0!3m2!1sen!2s!4v1778015135316!5m2!1sen!2s" style="height:260px; width:100%;" allowfullscreen="" loading="lazy"></iframe>
+                <p style="margin-top: 0.8rem; font-size: 0.85rem; color: var(--gray-600);"><strong>Diggs Mobile Auto Care</strong><br>2404 Sir Lance Dr, Chesapeake, VA 23325</p>
+                <div style="margin-top: 0.6rem;">
+                    <a href="https://maps.app.goo.gl/4h9i5wynsy1JvhwRA" target="_blank" style="color: var(--accent-green); text-decoration: none; font-weight: 500;">Open in Google Maps →</a>
+                </div>
+            </div>
+            <div style="background: var(--white); border-radius: 16px; padding: 1.2rem; border: 1px solid var(--gray-200);">
+                <h4 style="font-family: 'Plus Jakarta Sans', sans-serif; color: var(--dark-green); margin-bottom: 0.5rem;">🚗 We come to you</h4>
+                <p style="font-size: 0.85rem; color: var(--gray-600);">Serving all of Hampton Roads — Chesapeake, Norfolk, Virginia Beach, Portsmouth. Book your mobile detail today.</p>
+                <a href="tel:7573892524" style="display: inline-block; margin-top: 0.8rem; background: var(--accent-green); color: white; padding: 0.5rem 1rem; border-radius: 30px; text-decoration: none; font-size: 0.85rem; font-weight: 500;">Call (757) 389-2524</a>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-logo"><img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/78fce5cb-6cc1-4d63-c2dc-b7f0d32cba00/publicContain" alt="Diggs Mobile Auto Care"></div>
+        <div class="footer-links">
+            <a href="https://diggsmobileautocare.com/">Website</a>
+            <a href="tel:7573892524">(757) 389-2524</a>
+            <a href="#">2404 Sir Lance Dr, Chesapeake, VA 23325</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Diggs Mobile Auto Care. All rights reserved. Premium Mobile Detailing in Hampton Roads.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(el => {
+                if (el.isIntersecting) {
+                    el.target.classList.add('visible');
+                    observer.unobserve(el.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
+```
